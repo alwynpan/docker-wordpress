@@ -1,0 +1,14 @@
+FROM wordpress:5.4.2-php7.2-apache
+
+ENV PHP_MEMORY_LIMIT 64M
+ENV PHP_UPLOAD_MAX_FILESIZE 10M
+ENV PHP_POST_MAX_SIZE 10M
+ENV PHP_MAX_EXECUTION_TIME 300
+
+COPY ["entrypoint.sh", "/"]
+
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT [ "/entrypoint.sh" ]
+
+CMD ["apache2-foreground"]
