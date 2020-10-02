@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   wordpress:
-    image: alwynpan/wordpress
+    image: alwynpan/wordpress:5.5.1
     restart: always
     ports:
       - 8080:80

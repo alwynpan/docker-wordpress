@@ -10,7 +10,7 @@ services:
         - ./data/wordpress:/var/www/html
 
   wordpress:
-    image: alwynpan/wordpress
+    image: alwynpan/wordpress:5.5.1
     restart: always
     environment:
       WORDPRESS_DB_HOST: db
