@@ -10,7 +10,7 @@ services:
         - ./data/wordpress:/var/www/html
 
   wordpress:
-    image: alwynpan/docker-wordpress:5.5.1-php7.4-fpm
+    image: alwynpan/docker-wordpress:4.7.2-php7.1-fpm
     restart: always
     environment:
       WORDPRESS_DB_HOST: db

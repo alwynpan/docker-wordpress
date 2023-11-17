@@ -8,21 +8,13 @@ Please see [WordPress Docker hub page](https://hub.docker.com/_/wordpress/).
 
 ## Extra PHP Settings
 
-* `PHP\_MEMORY\_LIMIT=...` (default to 128M)
-* `PHP\_UPLOAD\_MAX\_FILESIZE=...` (default to 10M)
-* `PHP\_POST\_MAX\_SIZE=...` (default to 10M)
-* `PHP\_MAX\_EXECUTION\_TIME=...` (default to 120)
+- `PHP\_MEMORY\_LIMIT=...` (default to 128M)
+- `PHP\_UPLOAD\_MAX\_FILESIZE=...` (default to 10M)
+- `PHP\_POST\_MAX\_SIZE=...` (default to 10M)
+- `PHP\_MAX\_EXECUTION\_TIME=...` (default to 120)
 
 ## `Dockerfile` links
 
-* [5.5.1-php7.2-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php7.2-apache)
-* [5.5.1-php7.2-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php7.2-fpm)
-* [5.5.1-php7.2-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php7.2-fpm-alpine)
-
-* [5.5.1-php7.3-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php7.3-apache)
-* [5.5.1-php7.3-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php7.3-fpm)
-* [5.5.1-php7.3-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php7.3-fpm-alpine)
-
-* [5.5.1-php7.4-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php7.4-apache)
-* [5.5.1-php7.4-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php7.4-fpm)
-* [5.5.1-php7.4-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php7.4-fpm-alpine)
+- [4.7.2-php7.1-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php7.1-apache)
+- [4.7.2-php7.1-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php7.1-fpm)
+- [4.7.2-php7.1-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php7.1-fpm-alpine)
