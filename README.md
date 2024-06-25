@@ -8,10 +8,10 @@ Please see [WordPress Docker hub page](https://hub.docker.com/_/wordpress/).
 
 ## Extra PHP Settings
 
-- `PHP\_MEMORY\_LIMIT=...` (default to 128M)
-- `PHP\_UPLOAD\_MAX\_FILESIZE=...` (default to 10M)
-- `PHP\_POST\_MAX\_SIZE=...` (default to 10M)
-- `PHP\_MAX\_EXECUTION\_TIME=...` (default to 120)
+- `PHP_MEMORY_LIMIT=...` (default to 128M)
+- `PHP_UPLOAD_MAX_FILESIZE=...` (default to 10M)
+- `PHP_POST_MAX_SIZE=...` (default to 10M)
+- `PHP_MAX_EXECUTION_TIME=...` (default to 120)
 
 ## `Dockerfile` links
 
