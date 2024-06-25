@@ -1,4 +1,4 @@
-FROM wordpress:6.5.3-php8.1-fpm-alpine
+FROM wordpress:6.5.4-php8.1-fpm-alpine
 
 ENV PHP_MEMORY_LIMIT 128M
 ENV PHP_UPLOAD_MAX_FILESIZE 10M
