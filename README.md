@@ -15,14 +15,18 @@ Please see [WordPress Docker hub page](https://hub.docker.com/_/wordpress/).
 
 ## `Dockerfile` links
 
-- [6.5.4-php8.0-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.0-apache)
-- [6.5.4-php8.0-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.0-fpm)
-- [6.5.4-php8.0-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.0-fpm-alpine)
+- [6.5.5-php8.0-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.0-apache)
+- [6.5.5-php8.0-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.0-fpm)
+- [6.5.5-php8.0-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.0-fpm-alpine)
 
-- [6.5.4-php8.1-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.1-apache)
-- [6.5.4-php8.1-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.1-fpm)
-- [6.5.4-php8.1-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.1-fpm-alpine)
+- [6.5.5-php8.1-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.1-apache)
+- [6.5.5-php8.1-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.1-fpm)
+- [6.5.5-php8.1-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.1-fpm-alpine)
 
-- [6.5.4-php8.2-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.2-apache)
-- [6.5.4-php8.2-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.2-fpm)
-- [6.5.4-php8.2-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.2-fpm-alpine)
+- [6.5.5-php8.2-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.2-apache)
+- [6.5.5-php8.2-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.2-fpm)
+- [6.5.5-php8.2-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.2-fpm-alpine)
+
+- [6.5.5-php8.3-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.3-apache)
+- [6.5.5-php8.3-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.3-fpm)
+- [6.5.5-php8.3-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.3-fpm-alpine)
