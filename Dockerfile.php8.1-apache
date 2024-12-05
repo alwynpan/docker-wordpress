@@ -1,4 +1,4 @@
-FROM wordpress:6.7.0-php8.1-apache
+FROM wordpress:6.7.1-php8.1-apache
 
 ENV PHP_MEMORY_LIMIT 128M
 ENV PHP_UPLOAD_MAX_FILESIZE 10M
