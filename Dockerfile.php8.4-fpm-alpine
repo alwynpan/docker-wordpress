@@ -1,4 +1,4 @@
-FROM wordpress:7.0.0-php8.4-fpm-alpine
+FROM wordpress:7.0.1-php8.4-fpm-alpine
 
 ENV PHP_MEMORY_LIMIT=128M \
     PHP_UPLOAD_MAX_FILESIZE=10M \

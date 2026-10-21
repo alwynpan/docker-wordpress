@@ -11,7 +11,7 @@ services:
       - wordpress
 
   wordpress:
-    image: alwynpan/docker-wordpress:7.0.0-php8.5-fpm
+    image: alwynpan/docker-wordpress:7.0.1-php8.5-fpm
     restart: always
     environment:
       WORDPRESS_DB_HOST: db
