@@ -1,4 +1,4 @@
-FROM wordpress:6.9.2-php8.3-fpm
+FROM wordpress:6.9.4-php8.3-fpm
 
 ENV PHP_MEMORY_LIMIT=128M \
     PHP_UPLOAD_MAX_FILESIZE=10M \
