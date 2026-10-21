@@ -29,8 +29,12 @@ expect() { # pass-msg fail-msg test-command...
   if "$@"; then echo "  PASS $pass"; else echo "  FAIL $failmsg"; fail=1; fi
 }
 
-e2e() { # compose-file variant expected-sapi
-  local variant=$2 dir="$work/$2"
+e2e() { # compose-file expected-sapi
+  # Test the variant the compose file references, e.g. php8.4-apache.
+  local variant
+  variant=$(sed -n 's/^ *image: alwynpan\/docker-wordpress:[0-9.]*-//p' "$1")
+  [ -n "$variant" ] || { echo "== $1"; echo "  FAIL no alwynpan/docker-wordpress image"; fail=1; return; }
+  local dir="$work/$variant"
   local tag="dwp-test:$variant"
   mkdir -p "$dir"
   cp -R config "$1" "$dir/"
@@ -62,12 +66,12 @@ e2e() { # compose-file variant expected-sapi
   local out
   out=$(curl -s --data-binary @"$work/post.bin" http://localhost:8080/probe.php)
   expect "live ini + 5MB POST: $out" "live ini/POST: [$out]" \
-    [ "$out" = "128M|100M|100M|600|$3|$POST_BYTES" ]
+    [ "$out" = "128M|100M|100M|600|$2|$POST_BYTES" ]
 
   # Free port 8080 for the next stack.
   "${dc[@]}" down -v >/dev/null 2>&1
 }
 
-e2e docker-compose.yaml php8.3-apache apache2handler
-e2e docker-compose.fpm.yaml php8.3-fpm fpm-fcgi
+e2e docker-compose.yaml apache2handler
+e2e docker-compose.fpm.yaml fpm-fcgi
 exit $fail
