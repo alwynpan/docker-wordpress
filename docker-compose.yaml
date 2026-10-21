@@ -1,6 +1,6 @@
 services:
   wordpress:
-    image: alwynpan/docker-wordpress:6.7.2-php8.3-apache
+    image: alwynpan/docker-wordpress:6.8.0-php8.4-apache
     restart: always
     ports:
       - 8080:80
