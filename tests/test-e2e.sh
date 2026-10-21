@@ -13,7 +13,7 @@ work=$(mktemp -d "$PWD/data/.e2e.XXXXXX")
 fail=0
 stacks=()
 
-# shellcheck disable=SC2329 # invoked via trap
+# shellcheck disable=SC2317,SC2329 # invoked via trap
 cleanup() {
   local s
   for s in "${stacks[@]}"; do docker compose -p "$s" down -v >/dev/null 2>&1; done
@@ -56,7 +56,8 @@ e2e() { # compose-file variant expected-sapi
     [ -f "$dir/data/wordpress/wp-config.php" ]
   expect "mysql data persisted" "mysql data not persisted" [ -d "$dir/data/mysql/exampledb" ]
 
-  printf '%s' "$PROBE" > "$dir/data/wordpress/probe.php"
+  # Write via the container: on Linux the bind mount is owned by www-data, not the runner.
+  printf '%s' "$PROBE" | "${dc[@]}" exec -T wordpress sh -c 'cat > /var/www/html/probe.php'
   head -c "$POST_BYTES" /dev/zero > "$work/post.bin"
   local out
   out=$(curl -s --data-binary @"$work/post.bin" http://localhost:8080/probe.php)
