@@ -13,6 +13,15 @@ Please see [WordPress Docker hub page](https://hub.docker.com/_/wordpress/).
 - `PHP_POST_MAX_SIZE=...` (default to 10M)
 - `PHP_MAX_EXECUTION_TIME=...` (default to 120)
 
+These are read by PHP at startup from `/usr/local/etc/php/conf.d/uploads.ini` (see [config/php/uploads.ini](config/php/uploads.ini)), so they also work when the container runs as a non-root user.
+
+## Examples
+
+- `docker compose up` — Apache image with MySQL, on http://localhost:8080
+- `docker compose -f docker-compose.fpm.yaml up` — PHP-FPM image behind nginx with MySQL, on http://localhost:8080
+
+Data is persisted under `./data/`. When using the FPM example, keep `client_max_body_size` in [config/nginx/wordpress.conf](config/nginx/wordpress.conf) in line with `PHP_UPLOAD_MAX_FILESIZE`.
+
 ## `Dockerfile` links
 
 - [6.7.2-php8.1-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.1-apache)
