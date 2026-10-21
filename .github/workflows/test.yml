@@ -1,0 +1,44 @@
+name: Test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Lint shell scripts
+        run: shellcheck tests/*.sh
+      - name: Lint compose files
+        run: yamllint -d relaxed docker-compose.yaml docker-compose.fpm.yaml
+      - name: Validate compose files
+        run: |
+          docker compose -f docker-compose.yaml config -q
+          docker compose -f docker-compose.fpm.yaml config -q
+
+  images:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.1', '8.2', '8.3']
+        variant: [apache, fpm, fpm-alpine]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Test image
+        run: >-
+          tests/test-images.sh
+          Dockerfile.php${{ matrix.php }}-${{ matrix.variant }}
+
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Test compose examples
+        run: tests/test-e2e.sh
