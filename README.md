@@ -24,18 +24,18 @@ Data is persisted under `./data/`. When using the FPM example, keep `client_max_
 
 ## `Dockerfile` links
 
-- [7.1.0-php8.2-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.2-apache)
-- [7.1.0-php8.2-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.2-fpm)
-- [7.1.0-php8.2-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.2-fpm-alpine)
+- [7.1.1-php8.2-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.2-apache)
+- [7.1.1-php8.2-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.2-fpm)
+- [7.1.1-php8.2-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.2-fpm-alpine)
 
-- [7.1.0-php8.3-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.3-apache)
-- [7.1.0-php8.3-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.3-fpm)
-- [7.1.0-php8.3-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.3-fpm-alpine)
+- [7.1.1-php8.3-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.3-apache)
+- [7.1.1-php8.3-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.3-fpm)
+- [7.1.1-php8.3-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.3-fpm-alpine)
 
-- [7.1.0-php8.4-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.4-apache)
-- [7.1.0-php8.4-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.4-fpm)
-- [7.1.0-php8.4-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.4-fpm-alpine)
+- [7.1.1-php8.4-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.4-apache)
+- [7.1.1-php8.4-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.4-fpm)
+- [7.1.1-php8.4-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.4-fpm-alpine)
 
-- [7.1.0-php8.5-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.5-apache)
-- [7.1.0-php8.5-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.5-fpm)
-- [7.1.0-php8.5-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.5-fpm-alpine)
+- [7.1.1-php8.5-apache](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.5-apache)
+- [7.1.1-php8.5-fpm](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.5-fpm)
+- [7.1.1-php8.5-fpm-alpine](https://github.com/alwynpan/docker-wordpress/blob/master/Dockerfile.php8.5-fpm-alpine)
