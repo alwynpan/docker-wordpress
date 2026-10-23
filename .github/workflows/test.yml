@@ -5,6 +5,11 @@ on:
     branches: [master]
   pull_request:
   workflow_call:
+    inputs:
+      ref:
+        description: Git ref to test (defaults to the triggering commit)
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -14,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.ref }}
       - name: Lint shell scripts
         run: shellcheck tests/*.sh scripts/*.sh
       - name: Lint compose files
@@ -27,6 +34,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.ref }}
       - name: Test set-version script
         run: tests/test-set-version.sh
 
@@ -36,6 +45,8 @@ jobs:
       list: ${{ steps.list.outputs.list }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.ref }}
       - id: list
         run: echo "list=$(printf '%s\n' Dockerfile.* | jq -Rnc '[inputs]')" >> "$GITHUB_OUTPUT"
 
@@ -48,6 +59,8 @@ jobs:
         dockerfile: ${{ fromJSON(needs.dockerfiles.outputs.list) }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.ref }}
       - name: Test image
         env:
           DOCKERFILE: ${{ matrix.dockerfile }}
@@ -57,5 +70,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.ref }}
       - name: Test compose examples
         run: tests/test-e2e.sh
